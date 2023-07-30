@@ -1,0 +1,25 @@
+{
+    "baseUrl": "https://www.demoblaze.com/",
+    "env": {
+        "username": "romecam16",
+        "password": "test1234"
+      },
+    "integrationFolder": "cypress/tests",
+    "viewportHeight": 1000,
+    "viewportWidth": 1280,
+    "retries": {
+      "runMode": 2,
+      "openMode": 1
+    },
+    "experimentalStudio": true,
+    "failOnStatusCode": false,
+    "video":false,
+    "reporter": "mochawesome",
+    "reporterOptions": {
+      "reportDir": "cypress/results",
+      "overwrite": false,
+      "html": true,
+      "json": true
+      },
+      "chromeWebSecurity": false
+  }

@@ -1,0 +1,23 @@
+{
+  "messages": {
+    "userAlreadyExist": "This user already exist.",
+    "productAdded": "Product added.",
+    "wrongPassword":"Wrong password."
+  },
+  "categories": {
+    "phone": "Phones"
+  },
+  "phoneReference":{
+    "nokia": "Nokia lumia 1520",
+    "samsung": "Samsung galaxy s6"
+  },
+  "customerData":{
+    "name":"Camilo",
+    "country": "Colombia",
+    "city": "Pereira",
+    "creditCard": 4111111111111111,
+    "month": "February",
+    "year": 2024
+  }
+
+}
