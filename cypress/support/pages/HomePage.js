@@ -39,6 +39,39 @@ class HomePage {
         const cartLink = cy.contains ('Cart')
         cartLink.click()
     }
+
+    getCategoriesItems(){
+        let itemsText = []
+        cy.get('.card-title a').each(($el) =>itemsText.push($el.text()))
+        cy.get('button#next2').click({force:true})
+        cy.wait(3000)
+        cy.get('.card-title a').each(($el) =>itemsText.push($el.text()))
+        return itemsText
+    }
+
+    getPhoneItems(){
+        const itemsText = []
+        this.clickCategory("Phones")
+        cy.wait(1000)
+        cy.get('.card-title a').each(($el) =>itemsText.push($el.text()))
+        return itemsText
+    }
+
+    getLaptopItems(){
+        const itemsText = []
+        this.clickCategory("Laptops")
+        cy.wait(1000)
+        cy.get('.card-title a').each(($el) =>itemsText.push($el.text()))
+        return itemsText
+    }
+
+    getMonitorItems(){
+        const itemsText = []
+        this.clickCategory("Monitors")
+        cy.wait(1000)
+        cy.get('.card-title a').each(($el) =>itemsText.push($el.text()))
+        return itemsText
+    }
 }
 
 export default HomePage

@@ -79,4 +79,21 @@ describe('Demo Blaze Tests',()=> {
         cy.placeOrderAndFillModal(name, country, city, creditCard, month, year)
         cartPage.verifyPurchase(creditCard, name)
     }); 
-})
+
+    it('Verify category items(Test 4)', async function (){
+        cy.login()
+        const categoriesItems =  homePage.getCategoriesItems()
+        const phoneItems =  homePage.getPhoneItems()
+        const laptopItems =  homePage.getLaptopItems()
+        const monitorItems =  homePage.getMonitorItems()
+
+        const resultPhoneItems = phoneItems.every(val => categoriesItems.includes(val));
+        expect(resultPhoneItems).to.be.true
+
+        const resultMonitorItems = monitorItems.every(val => categoriesItems.includes(val));
+        expect(resultMonitorItems).to.be.true
+
+        const resultLaptopItems = laptopItems.every(val => categoriesItems.includes(val));
+        expect(resultLaptopItems).to.be.true
+    })
+});
